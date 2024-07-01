@@ -1,0 +1,304 @@
+// ----------------------------------
+// INFO : style layout 
+// có 7 dạng hiển thị : left, right, center, outset-left, outset-right, full-width, max-width
+// bỏ mixin w1300, w100 nếu ảnh default = nội dung bài viết
+// ----------------------------------
+@mixin classOutsetLeftRightDetail() {
+    &.outset-left {
+        margin-left: auto;
+    }
+
+    &.outset-right {
+        margin-right: auto;
+    }
+}
+
+@mixin maxWidthFullWiwthDetail() {
+
+    &.full-width,
+    &.max-width {
+        width: 100%;
+    }
+}
+
+// style table in side blockquote, notebox
+@mixin table() {
+    table {
+
+        &.full-width,
+        &.max-width {
+            width: 100%;
+        }
+    }
+
+    @include tableNotBorder();
+}
+
+@mixin space() {
+    >* {
+        margin-bottom: $gutter-body !important;
+
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+    }
+}
+
+@mixin tableNotBorder() {
+
+    td,
+    th {
+        padding: 0 !important;
+        border: none !important;
+        display: block;
+        align-items: center;
+
+        &.caption {
+            padding-bottom: 10px !important;
+        }
+    }
+}
+
+@mixin classLeftRight() {
+    &.align-left {
+        width: 50%;
+        float: left;
+        margin-right: $gutter-body;
+    }
+
+    &.align-right {
+        width: 50%;
+        float: right;
+        margin-left: $gutter-body;
+    }
+}
+
+@mixin maxWidth() {
+    &.max-width {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100vw - var(--widthScroll));
+        max-width: 1300px;
+    }
+}
+
+@mixin alignLeftRight() {
+    &[align="center"] {
+        @include tableNotBorder();
+        text-align: left;
+        width: 100%;
+    }
+
+    &[align="left"] {
+        width: 50%;
+        float: left;
+        margin-right: $gutter-body;
+        text-align: left;
+        @include tableNotBorder();
+    }
+
+    &[align="right"] {
+        width: 50%;
+        float: right;
+        margin-left: $gutter-body;
+        text-align: left;
+        @include tableNotBorder();
+    }
+}
+
+@mixin w1300() {
+    &[align="center"] {
+        position: relative;
+        width: 1300px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@mixin w100() {
+    &[align="center"] {
+        width: 100%;
+    }
+}
+
+// INFO : Format cho các thành phần cơ bản trong bài chi tiết
+.zce-content-body {
+    >* {
+        color: var(--gray-800);
+        font-family: var(--font-family-primary);
+        font-size: 18px;
+        font-weight: $font-weight-normal;
+        line-height: 160%;
+    }
+
+    table {
+
+        td,
+        th {
+            padding: 0;
+        }
+    }
+
+    img,
+    video {
+        max-width: 100%;
+        display: flex;
+        margin: 0 auto;
+        width: auto !important;
+    }
+
+    figure.audio {
+        audio {
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+
+    figcaption,
+    .caption {
+        display: block;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        color: #888;
+        text-align: center;
+        font-family: var(--font-family-primary);
+        font-size: 16px;
+        line-height: 20px;
+        font-style: italic;
+        margin-left: auto;
+        margin-right: auto;
+
+        //1280
+        @include media-breakpoint-up(xl) {
+            max-width: 660px;
+        }
+
+
+        >* {
+            margin-top: 0;
+        }
+    }
+
+    table:not([class]) {
+        width: 100%;
+
+        td,
+        th {
+            padding: 10px;
+            border: 1px solid #E9ECEF;
+        }
+    }
+
+    // figure, // comment dòng này vì common đã có
+    table {
+        @include classLeftRight();
+        @include alignLeftRight();
+        // @include maxWidth(); // comment dòng này vì common đã có
+    }
+}
+
+// INFO : for detail-page
+body.detail-page, body.product-detail {
+    .zce-content-body {
+        .outset-left {
+            margin-left: auto;
+        }
+
+        .outset-right {
+            margin-right: auto;
+        }
+
+        .full-width,
+        .max-width {
+            width: 100%;
+        }
+    }
+}
+
+// INFO : style các box trong bài viết
+.article {
+    display: grid;
+    gap: var(--gutter-default);
+
+    .article-footer,
+    .article__body {
+
+        // 1024
+        @include media-breakpoint-up(lg) {}
+
+        //1280
+        @include media-breakpoint-up(xl) {
+            width: 660px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .article-footer {
+        display: grid;
+        gap: 24px;
+    }
+
+    // gallery
+    .article__slider {
+        position: relative;
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            &:after {
+                color: var(--white);
+                text-shadow: 4px 4px 4px rgba(0, 0, 0, .7);
+                font-size: 26px;
+
+                // 768
+                @include media-breakpoint-up(md) {
+                    //css
+                    font-size: 40px;
+                }
+            }
+        }
+
+        .photo-detail-img {
+            img {
+                border-radius: 6px;
+            }
+        }
+
+        .swiper-slide {
+            figcaption {
+                position: absolute;
+                bottom: 0;
+                padding-left: 20px;
+                padding-right: 20px;
+                line-height: 150%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+
+                //1280
+                @include media-breakpoint-up(xl) {
+                    max-width: 660px;
+                }
+
+                >* {
+                    color: var(--white);
+                    text-shadow: 4px 4px 4px rgba(0, 0, 0, .7);
+                    line-height: 150%;
+                }
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+
+        .swiper-pagination {
+            bottom: 0;
+
+            .swiper-pagination-bullet-active {
+                background-color: var(--primary);
+            }
+        }
+    }
+}

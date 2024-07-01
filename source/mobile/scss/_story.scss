@@ -1,0 +1,121 @@
+.story {
+
+    >* {
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+
+    &__thumb {
+        overflow: hidden;
+        position: relative;
+
+        a {
+            width: 100%;
+            height: 100%;
+            // position: relative;
+            position: absolute;
+            display: flex;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-indent: -9999px;
+            transition: transform 0.5s ease-out 0.1s;
+            object-fit: cover;
+        }
+
+        //1280
+        @include media-breakpoint-up(xl) {
+            padding-bottom: 0 !important;
+        }
+    }
+
+    &__heading {
+        display: flex;
+
+        a {
+            display: block;
+            transition: 0.5s;
+            color: var(--title);
+            line-height: 140%;
+            font-family: var(--font-family-serif);
+            font-weight: $font-weight-medium;
+
+            &:hover {
+                color: var(--primary) !important;
+            }
+
+            [class*="ic-"] {
+                display: inline;
+
+                &::before {
+                    color: var(--primary);
+                }
+            }
+        }
+    }
+
+    &__summary {
+        font-weight: $font-weight-normal;
+        color: var(--summary);
+        font-size: 14px;
+        font-family: var(--font-family-serif);
+        line-height: 150%;
+
+        >* {
+            display: inline;
+            overflow: hidden;
+            margin-bottom: 0;
+            font-weight: $font-weight-normal;
+            color: var(--summary);
+            line-height: 150%;
+        }
+
+        a {
+            color: var(--primary);
+        }
+    }
+
+    // .story__time
+    .time {
+        display: block;
+        font-family: "Mulish";
+        color: var(--time);
+        line-height: 150%;
+        font-size: 13px;
+        font-weight: $font-weight-normal;
+    }
+
+    // story--cate
+    .story__cate {
+        color: var(--primary);
+        font-weight: $font-weight-semibold;
+        line-height: 140%;
+        text-transform: uppercase;
+    }
+
+    &__relate {
+        >* {
+            display: block;
+        }
+    }
+
+    &__sub-heading a {
+        &:hover {
+            color: var(--primary) !important;
+        }
+    }
+}

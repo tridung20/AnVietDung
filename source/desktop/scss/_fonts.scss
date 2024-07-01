@@ -1,0 +1,35 @@
+// Lexend : bold, semibold, medium, regular, light
+@font-face {
+    font-family: "Lexend";
+    src: url("../fonts/Lexend/Lexend-Bold.woff2");
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lexend";
+    src: url("../fonts/Lexend/Lexend-SemiBold.woff2");
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lexend";
+    src: url("../fonts/Lexend/Lexend-Medium.woff2");
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lexend";
+    src: url("../fonts/Lexend/Lexend-Regular.woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lexend";
+    src: url("../fonts/Lexend/Lexend-Light.woff2");
+    font-weight: 300;
+    font-display: swap;
+}

@@ -1,0 +1,29 @@
+<div class="project-list">
+    <div class="container">
+        <!-- <div class="box-heading">
+            <span class="title">
+                Danh sách dự án
+            </span>
+        </div> -->
+        @@include('../../breadcrumb/breadcrumb.html',{"box-name" : "Danh sách dự án"})
+        <div class="box-content">
+            @@for ( var i=0; i < 9; i++) { <article class="story">
+                <figure class="story__thumb">
+                    <a href="#" title=""> <img src="https://placehold.co/370x250"
+                            alt="370x250 (3x2)"></a>
+                </figure>
+                <div class="story__heading">
+                    <a href="#">
+                        Xây dựng Trung tâm Điều trị theo yêu cầu và Quốc tế giai đoạn II.
+                    </a>
+                </div>
+                <div class="story__summary .story__shorten">
+                    Với việc sử dụng các nguồn năng lượng tái tạo như gió và năng lượng mặt trời, dự án này nhấn mạnh
+                    vào việc phát triển hệ thống điện mạch linh hoạt và hiệu quả cao để cung cấp điện
+                </div>
+                </article>
+                }
+        </div>
+        <a href="#" class="btn-view-more">Xem thêm<i class="ic-right"></i></a>
+    </div>
+</div>

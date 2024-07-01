@@ -1,0 +1,53 @@
+related-content {
+    border-left: 2px solid var(--primary, #CD5600);
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 16px;
+
+    .img {
+        order: 2;
+    }
+
+
+    .info {
+        order: 1;
+
+        a {
+            color: var(--black);
+            font-family: "PlayfairDisplay";
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 140%;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .date {
+            font-size: 14px;
+        }
+    }
+}
+
+// old html
+.article__body.zce-content-body {
+
+    .nleft,
+    .nright,
+    .qleft,
+    .qright {
+        width: 50%;
+    }
+
+    .nleft,
+    .qleft {
+        float: left;
+        margin-right: 20px;
+    }
+
+    .nright,
+    .qright {
+        float: right;
+        margin-left: 20px;
+    }
+}

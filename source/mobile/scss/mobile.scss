@@ -1,0 +1,43 @@
+ @import "variables";
+@import "./mixins/global";
+
+// ----------------------------------
+// INFO : style for global
+// ----------------------------------
+
+@import "reboot";
+@import "fonts";
+@import "icons";
+@import "layout";
+@import "story";
+@import "styles";
+
+// ----------------------------------
+// INFO : style for component 
+// ----------------------------------
+
+@import '../component/header/header';
+@import '../component/footer/footer';
+@import '../component/button/back-to-top';
+@import '../component/breadcrumb/breadcrumb';
+@import '../component/error/error';
+
+// ----------------------------------
+// INFO : style for detail-page
+// ----------------------------------
+
+@import '../component/detail-page/article-header/article-header';
+@import '../component/detail-page/article-body/article-body';
+
+
+// ----------------------------------
+// INFO : style for box-style
+// ----------------------------------
+@import '../component/box-style/abf-homepage/abf-homepage';
+@import '../component/box-style/project-list/project-list';
+@import '../component/box-style/zone/zone';
+@import '../component/box-style/location/location';
+@import '../component/box-style/product-list/product-list';
+@import '../component/box-style/box-support/box-support';
+@import '../component/box-style/box-product/box-product';
+@import '../component/box-style/product-item/product-item';

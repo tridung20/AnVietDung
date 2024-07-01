@@ -1,0 +1,87 @@
+.breadcrumb {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    gap: 12px;
+
+    .main a {
+        color: var(--primary);
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.4;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sub {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        overflow-x: scroll;
+        
+        a {
+            white-space: nowrap;
+            font-size: 16px;
+            font-weight: 300;
+            color: var(--gray-600);
+
+            &:hover {
+                color: var(--primary);
+            }
+        }
+
+        .active {
+            color: var(--primary);
+            font-weight: 500;
+        }
+    }
+}
+
+// .detail-page,
+// .longform-page {
+//     .breadcrumb {
+//         .main {
+//             padding-left: 30px;
+
+//             >* {
+//                 font-weight: $font-weight-normal;
+//                 font-size: 16px;
+//                 line-height: 23px;
+//                 color: #6C757D;
+//                 font-family: var(--font-family-sans-serif);
+//                 text-transform: none;
+//             }
+
+//             &:before {
+//                 height: 16px;
+//                 left: 15px;
+//                 top: 10px;
+//             }
+
+//             &:first-child {
+//                 padding-left: 0;
+
+//                 >* {
+//                     font-weight: $font-weight-normal;
+//                     font-size: 16px;
+//                     line-height: 23px;
+//                     font-family: var(--font-family-sans-serif);
+//                     color: #6C757D;
+//                     text-transform: none;
+
+//                     &:hover,
+//                     &.active {
+//                         color: var(--primary);
+//                     }
+//                 }
+//             }
+//         }
+
+//         .sub {
+//             display: none;
+//         }
+//     }
+// }

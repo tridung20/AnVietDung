@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>NAME</title>
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="../styles/css/desktop.css" />
+</head>
+<style>
+  .top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gutter);
+    padding: 40px;
+  }
+
+  .list-page {
+    font-size: 16px;
+  }
+
+  li {
+    list-style-type: auto;
+  }
+
+  [class*="ic-"]:before {
+    font-size: 30px;
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 60px;
+  }
+
+  .list li:has(.ic-default) {
+    visibility: hidden;
+  }
+
+  .text-blue {
+    color: blue;
+  }
+
+  .demo-wrap {
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    display: inline-flex;
+    margin-bottom: 30px !important;
+  }
+
+  .fw-note {
+    background-color: #fff3cd;
+    padding: 20px;
+    display: table;
+    margin-bottom: 50px !important;
+    align-items: flex-end;
+  }
+
+  pre {
+    display: inline-block;
+    padding: 30px 50px 0px 0px;
+    margin-left: -100px;
+  }
+
+  #general-story,
+  #general-box {
+    margin-top: 50px;
+  }
+
+  #general-story .container,
+  #general-box .container {
+    font-size: 16px;
+  }
+
+  #general-story h2,
+  #general-box h2 {
+    font-size: 50px;
+  }
+
+  #general-story h3,
+  #general-box h3 {
+    font-size: 30px;
+  }
+</style>
+
+<body>
+  <div class="site-body container">
+    <div class="top">
+      <ul>
+        <!-- những trang cơ bản -->
+        <li><a href="./01-homepage.html">homepage</a></li>
+        <li><a href="./02-projects.html">projects</a></li>
+        <li><a href="./03-detail.html">detail</a></li>
+        <li><a href="./04-products.html">products</a></li>
+        <li><a href="./05-location.html">location</a></li>
+        <li><a href="./06-product-detail.html">product-detail</a></li>
+        <li><a href="./07-error.html">error</a></li>
+      </ul>
+      <ul class="list">
+        <li><i class="ic-exchange"></i></li>
+        <li><i class="ic-facebook"></i></li>
+        <li><i class="ic-flash"></i></li>
+        <li><i class="ic-genuine"></i></li>
+        <li><i class="ic-guarantee"></i></li>
+        <li><i class="ic-left"></i></li>
+        <li><i class="ic-right"></i></li>
+        <li><i class="ic-search"></i></li>
+        <li><i class="ic-top"></i></li>
+        <li><i class="ic-transport"></i></li>
+        <li><i class="ic-youtube"></i></li>
+        <li><i class="ic-zalo"></i></li>
+        <li><i class="ic-bottom"></i></li>
+        <li><i class="ic-call"></i></li>
+        <li><i class="ic-close"></i></li>
+        <li><i class="ic-menu"></i></li>
+        <li><i class="ic-angle-down"></i></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

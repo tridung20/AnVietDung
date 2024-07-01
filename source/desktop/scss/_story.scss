@@ -1,0 +1,194 @@
+.story {
+    &__thumb {
+        overflow: hidden;
+        position: relative;
+        // border-radius: 6px;
+
+        @include media-breakpoint-down(md) {
+            height: inherit !important;
+        }
+
+        // -- không sửa
+        a {
+            width: 100%;
+            height: auto;
+            display: flex;
+            position: relative;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-indent: -9999px;
+            transition: transform 0.5s ease-out 0.1s;
+            // height: 100%;
+            // object-fit: cover;
+        }
+
+        // -- kết thúc
+    }
+
+    &__sub-heading {
+        color: var(--primary);
+    }
+
+    &__heading {
+        display: flex;
+
+        a {
+            transition: 0.5s;
+            font-size: 16px;
+            font-family: var(--font-family-serif);
+            font-weight: $font-weight-medium;
+            color: var(--title);
+
+            &:hover {
+                color: var(--primary);
+            }
+        }
+
+        i {
+            font-size: inherit;
+
+            &::before {
+                font-size: inherit;
+            }
+        }
+    }
+
+    &__meta {
+        a {
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
+
+    &__cate {
+        color: var(--primary);
+        font-family: var(--font-family-sans-serif);
+        font-size: 14px;
+        line-height: 150%;
+        text-transform: uppercase;
+    }
+
+    &__time {
+        font-size: 14px;
+        font-family: var(--font-family-sans-serif);
+        font-weight: $font-weight-normal;
+        color: var(--gray-600, #6C757D);
+    }
+
+    &__author {
+        font-size: 14px;
+        font-family: var(--font-family-sans-serif);
+        font-weight: $font-weight-normal;
+        color: var(--gray-600, #6C757D);
+    }
+
+    &__heading + &__time {}
+
+    &__heading + &__cate {}
+
+    &__heading + &__author {}
+
+    &__summary {
+        > * {
+            font-size: 14px;
+            font-weight: $font-weight-normal;
+            color: var(--gray-600, #6C757D);
+        }
+    }
+
+    &__related {
+        a {
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
+
+    // ====== spacing + flex ====== //
+    &__heading {
+        margin-bottom: 8px;
+        display: flex;
+    }
+
+    &__meta,
+    &__summary,
+    &__heading + &__time,
+    &__heading + &__cate {
+        margin-bottom: 10px;
+        display: flex;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+
+    &.no-photo {
+        .story__thumb {
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+            display: block;
+            content: "";
+            border: 1px solid var(--border-color);
+            background: var(--gray-500, #adb5bd) url(../img/logo.png) center center / contain no-repeat;
+            filter: grayscale(100%) opacity(0.2);
+        }
+    }
+
+    &.story-gif {
+        .story__thumb {
+            background-color: var(--gray-100, #f8f9fa);
+
+            > a {
+                display: inline-table;
+            }
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                width: initial;
+                height: initial;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+// HTML tiêu chuẩn : 
+// NOTE : story chỉ có duy nhất time/cate/author thì để ngoài article__meta cho gọn HTML
+/*
+<article class="story">
+    <figure class="story__thumb">
+        <a href="03-detail.html">
+          <img src="https://source.unsplash.com/random/570x425?sig=1" alt="570x425 (~4:3)">
+        </a>
+    </figure>
+    <div class="story__meta">
+        <time class="story__time">22/09/2023 - 17:08</time>
+        <a href="#" class="story__cate">Chính trị</a>
+        <a href="#" class="story__author">Phong Lê</a>
+    </div>
+    <span class="story__sub-heading">GS.TS.NGND. Tạ Thành Văn - Chủ tịch Hội đồng trường Trường Đại học Y Hà Nội:</span>
+    <h2 class="story__heading">
+        <a href="03-detail.html">
+            Fed giữ lãi suất ở mức ổn định, có thể cắt giảm vào năm sau
+            <i class="ic-photo"></i>
+            <i class="ic-video"></i>
+            <i class="ic-infographic"></i>
+            <i class="ic-interview"></i>
+            <i class="ic-live"></i>
+            <i class="ic-longform"></i>
+        </a>
+    </h2>
+    <div class="story__related">
+        <a href="03-detail.html">Khơi thông dòng "vốn mồi" FDI vào Việt Nam</a>
+        <a href="03-detail.html">Hanoi Melody Residences mở bán tòa mới: Cơ hội cho khách ở thực và đầu tư</a>
+    </div>
+</article>
+*/

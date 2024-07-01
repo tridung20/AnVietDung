@@ -1,0 +1,113 @@
+@import 'common';
+@import './zce-body.scss';
+
+.detail-page .article {
+    .article__body.zce-content-body {
+
+        .article__meta,
+        .article__avatar,
+        .audio {
+            left: 50%;
+            position: relative;
+            transform: translateX(-50%);
+            right: auto;
+
+            // 1024
+            @include media-breakpoint-up(lg) {
+                width: 730px;
+            }
+
+            //1280
+            @include media-breakpoint-up(xl) {
+                width: 830px;
+            }
+        }
+
+        >.full-width,
+        >.max-width {
+
+            // 1024
+            @include media-breakpoint-up(lg) {
+                width: 730px;
+            }
+
+            //1280
+            @include media-breakpoint-up(xl) {
+                width: 830px;
+            }
+        }
+    }
+}
+
+//  Gallery
+.article__gallery {
+    position: relative;
+    margin-bottom: 10px !important;
+
+    .swiper-slide {
+        width: 100% !important;
+
+        img {
+            width: 100% !important;
+            object-fit: cover;
+        }
+    }
+
+    .swiper-wrapper {
+        padding-bottom: 44px !important;
+    }
+
+    .swiper.mySwiper2 {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: absolute;
+        font-size: 0;
+        width: 40px;
+        height: 40px;
+        z-index: 1;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 990px;
+        background: rgba(0, 0, 0, 0.7);
+        box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .swiper-button-next {
+        right: 20px;
+
+        &::after {
+            left: 2px;
+        }
+    }
+
+    .swiper-button-prev {
+        left: 20px;
+
+        &::after {
+            right: 2px;
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #fff;
+        transition: all 0.3s;
+        
+        &:hover {
+            background: #000;
+        }
+        
+        &::after {
+            font-size: 20px;
+            position: relative;
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background: var(--primary) !important;
+    }
+}

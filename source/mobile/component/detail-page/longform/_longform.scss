@@ -1,0 +1,40 @@
+.longform-page {
+
+    // change color
+    .related-news {
+        background: rgba(0, 0, 0, 0.20);
+
+        .highlight {
+            color: #343A40;
+        }
+
+        .story::after {
+            background: rgba(255, 255, 255, 0.20);
+        }
+    }
+
+    .article__title {
+
+        [class*=ic-]::after,
+        .type::after {
+            background: rgba(255, 255, 255, 0.20);
+        }
+    }
+
+    .article__tag {
+        a:not(.active) {
+            border: 1px solid var(--gray-400, #CED4DA);
+            color: #FFF;
+            background: transparent;
+        }
+    }
+
+    .article__meta {
+        border-top: 1px solid rgba(255, 255, 255, 0.20);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+    }
+
+    .article__comment .box-heading {
+        border-top: 1px solid rgba(255, 255, 255, 0.20);
+    }
+}

@@ -1,0 +1,29 @@
+.container {
+    width: var(--container);
+    min-width: var(--container);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.site-body {
+    // padding-top: 30px;
+    // padding-bottom: var(--gutter-row);
+
+    // >* {
+    //     margin-bottom: var(--gutter-row);
+
+    //     &:last-child {
+    //         margin-bottom: 0;
+    //     }
+    // }
+
+    // .container {
+    //     >* {
+    //         margin-bottom: var(--gutter-row);
+
+    //         &:last-child {
+    //             margin-bottom: 0;
+    //         }
+    //     }
+    // }
+}

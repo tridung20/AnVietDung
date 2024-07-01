@@ -1,0 +1,296 @@
+// ----------------------------------
+// INFO : style layout 
+// có 7 dạng hiển thị : left, right, center, outset-left, outset-right, full-width, max-width
+// bỏ mixin w1300, w100 nếu ảnh default = nội dung bài viết
+// ----------------------------------
+@mixin classOutsetLeftRightDetail() {
+    &.outset-left {
+        margin-left: auto;
+    }
+
+    &.outset-right {
+        margin-right: auto;
+    }
+}
+
+@mixin maxWidthFullWiwthDetail() {
+
+    &.full-width,
+    &.max-width {
+        width: 100%;
+    }
+}
+
+// style table in side blockquote, notebox
+@mixin table() {
+    table {
+
+        &.full-width,
+        &.max-width {
+            width: 100%;
+        }
+    }
+
+    @include tableNotBorder();
+}
+
+@mixin space() {
+    > * {
+        margin-bottom: $gutter-body !important;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@mixin tableNotBorder() {
+
+    td,
+    th {
+        padding: 0 !important;
+        border: none !important;
+        display: block;
+        align-items: center;
+
+        &.caption {
+            padding-bottom: 10px !important;
+        }
+    }
+}
+
+@mixin classLeftRight() {
+    &.align-left {
+        width: 50%;
+        float: left;
+        margin-right: $gutter-body;
+    }
+
+    &.align-right {
+        width: 50%;
+        float: right;
+        margin-left: $gutter-body;
+    }
+}
+
+@mixin maxWidth() {
+    &.max-width {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100vw - 17px);
+        max-width: 1300px;
+    }
+}
+
+@mixin alignLeftRight() {
+    &[align="center"] {
+        @include tableNotBorder();
+        text-align: left;
+        width: 100%;
+    }
+
+    &[align="left"] {
+        width: 50%;
+        float: left;
+        margin-right: $gutter-body;
+        text-align: left;
+        @include tableNotBorder();
+    }
+
+    &[align="right"] {
+        width: 50%;
+        float: right;
+        margin-left: $gutter-body;
+        text-align: left;
+        @include tableNotBorder();
+    }
+}
+
+@mixin w1300() {
+    &[align="center"] {
+        position: relative;
+        width: 1300px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@mixin w100() {
+    &[align="center"] {
+        width: 100%;
+    }
+}
+
+// INFO : Format cho các thành phần cơ bản trong bài chi tiết
+.zce-content-body {
+    > * {
+        font-family: var(--font-family-serif);
+        font-size: 18px;
+        line-height: 160%;
+        color: var(--title);
+    }
+
+    table {
+
+        td,
+        th {
+            padding: 0;
+        }
+    }
+
+    img,
+    video {
+        max-width: 100%;
+        display: flex;
+        margin: 0 auto;
+        width: auto !important;
+    }
+
+    figcaption,
+    .caption {
+        font-size: 16px;
+        font-weight: $font-weight-light;
+        font-style: italic;
+        font-family: var(--font-family-sans-serif);
+        color: #8c8c8c;
+        text-align: center;
+        display: block;
+        margin-top: 8px;
+        position: relative;
+        padding-bottom: 8px;
+        line-height: 1.5;
+
+        > * {
+            margin-top: 0;
+        }
+    }
+
+    table:not([class]) {
+        width: 100%;
+
+        td,
+        th {
+            padding: 10px;
+            border: 1px solid #E9ECEF;
+        }
+    }
+
+    table {
+        @include classLeftRight();
+        @include alignLeftRight();
+    }
+}
+
+// INFO : for detail-page
+.detail-page, .product-detail {
+    .zce-content-body {
+        .outset-left {
+            margin-left: auto;
+        }
+
+        .outset-right {
+            margin-right: auto;
+        }
+
+        .full-width,
+        .max-width {
+            width: 100%;
+        }
+    }
+}
+
+// INFO : style các box trong bài viết
+.zce-content-body {
+    
+    // style caption grid ảnh
+    [class^=layout-image-] figure figcaption {
+        margin-top: 0;
+        text-align: left;
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.detail-page {
+    .zce-content-body {
+        .article__slider {
+            &.full-width {
+                .swiper-button-next {
+                    right: 10px;
+                }
+
+                .swiper-button-prev {
+                    left: 10px;
+                }
+            }
+        }
+    }
+}
+
+// slider ảnh
+.article__slider {
+    position: relative;
+
+    /// 1024
+    @include media-breakpoint-only(lg) {
+
+        &.full-width,
+        &.max-width {
+            .swiper-button-next {
+                right: 100px;
+            }
+
+            .swiper-button-prev {
+                left: 100px;
+            }
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        &:after {
+            color: var(--white, #fff);
+            text-shadow: 4px 4px 4px rgba(0, 0, 0, .7);
+        }
+    }
+
+    .photo-detail-img {
+        img {
+            border-radius: 6px;
+        }
+    }
+
+    .swiper-slide {
+        figcaption {
+            position: absolute;
+            bottom: 0;
+            padding-left: 20px;
+            padding-right: 20px;
+            line-height: 150%;
+            max-width: 660px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            > * {
+                color: var(--white, #fff);
+                text-shadow: 4px 4px 4px rgba(0, 0, 0, .7);
+                line-height: 150%;
+            }
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    .swiper-pagination {
+        bottom: 0;
+
+        .swiper-pagination-bullet-active {
+            background-color: var(--primary, #980700);
+        }
+    }
+}

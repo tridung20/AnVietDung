@@ -1,0 +1,81 @@
+// HTML GLOBAL
+html {
+    font-size: 62.5% !important;
+}
+
+$body-bg: #fff;
+$body-color: #141414;
+$font-size-base: 1.4rem;
+// OTHER
+$transition : 0.5s;
+//  FONT WEIGHT
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// COLOR
+:root {
+    // color default
+    --white: #fff;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #D9D9D9;
+    --gray-600: #8c8c8c;
+    --gray-700: #595959;
+    --gray-800: #454545;
+    --gray-900: #141414;
+    --black: #000;
+    // color site
+    --primary: #00A859;
+    --secondary: #ED342E;
+    --title: #141414;
+    --summary: #595959;
+    --border-color: #D9D9D9;
+    --hover: #00A859;
+}
+
+// FONT 
+:root {
+    --font-family-sans-serif: "Lexend", Arial, Helvetica, sans-serif;
+    // --font-family-serif: "Noto Serif", Arial, Helvetica, sans-serif;
+}
+
+// GUTTER
+// :root {
+//     --gutter-default: 16px; // Khoảng cách giữa các element trong 1 zone
+//     --gutter-grid: 30px; // Khoảng cách sử dụng trong grid design
+//     --gutter-zone: 40px; // Khoảng cách giữa các zone trong body
+// }
+
+// BREAKPPOINT
+$grid-breakpoints: () !default;
+$grid-breakpoints: map-merge((
+            sm: 576px,
+            md: 768px,
+            lg: 1024px,
+            xl: 1366px,
+        ),
+        $grid-breakpoints);
+@import "mixins/breakpoints";
+
+:root {
+
+    // 0-1023
+    @include media-breakpoint-down(md) {
+        --container: 730px;
+    }
+
+    // 1024-1279
+    @include media-breakpoint-between(lg, lg) {
+        --container: 980px;
+    }
+
+    //1280
+    @include media-breakpoint-up(xl) {
+        --container: 1170px;
+    }
+}

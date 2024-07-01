@@ -1,0 +1,94 @@
+.breadcrumb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 20px;
+
+    .main a {
+        color: var(--primary);
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 1.4;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sub {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        
+        @include media-breakpoint-down(md) {
+            gap: 20px;
+        }
+        
+        a {
+            white-space: nowrap;
+            font-size: 18px;
+            font-weight: 300;
+            color: var(--gray-600);
+
+            @include media-breakpoint-down(md) {
+                font-size: 16px;
+            }
+
+            &:hover {
+                color: var(--primary);
+            }
+        }
+
+        .active {
+            color: var(--primary);
+            font-weight: 500;
+        }
+    }
+}
+
+// .detail-page,
+// .longform-page {
+//     .breadcrumb {
+//         .main {
+//             padding-left: 30px;
+
+//             >* {
+//                 font-weight: $font-weight-normal;
+//                 font-size: 16px;
+//                 line-height: 23px;
+//                 color: #6C757D;
+//                 font-family: var(--font-family-sans-serif);
+//                 text-transform: none;
+//             }
+
+//             &:before {
+//                 height: 16px;
+//                 left: 15px;
+//                 top: 10px;
+//             }
+
+//             &:first-child {
+//                 padding-left: 0;
+
+//                 >* {
+//                     font-weight: $font-weight-normal;
+//                     font-size: 16px;
+//                     line-height: 23px;
+//                     font-family: var(--font-family-sans-serif);
+//                     color: #6C757D;
+//                     text-transform: none;
+
+//                     &:hover,
+//                     &.active {
+//                         color: var(--primary);
+//                     }
+//                 }
+//             }
+//         }
+
+//         .sub {
+//             display: none;
+//         }
+//     }
+// }

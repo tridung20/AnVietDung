@@ -1,0 +1,15 @@
+@mixin scroll-style {
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar-track {}
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        background-color: var(--gray-100, #f8f9fa);;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--gray-300, #dee2e6);;
+        border-radius: 2px;
+    }
+}

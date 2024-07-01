@@ -1,0 +1,47 @@
+.abf-homepage {
+    .swiper {
+        width: 100%;
+
+        .swiper-slide {
+            position: relative;
+
+            .img-content {
+                position: absolute;
+                color: #fff;
+                text-align: center;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.70);
+                
+                p {
+                    
+                    &:first-child {
+                        font-size: 50px;
+                        font-weight: 500;
+
+                        @include media-breakpoint-down(md) {
+                            font-size: 30px;
+                        }
+                    }
+
+                    &:last-child {
+                        font-size: 60px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+
+                        @include media-breakpoint-down(md) {
+                            font-size: 40px;
+                        }
+                    }
+                }
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        } 
+    }
+}

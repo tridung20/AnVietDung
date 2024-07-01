@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>03-detail</title>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../styles/css/mobile.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body class="detail-page">
+  <!-- site header -->
+  @@include('../component/header/header.html')
+
+  <!-- site body -->
+
+  <div class="site-body">
+    <div class="box-social">
+      <a href="#">
+        <i class="ic-call"></i>
+        call
+      </a>
+      <div class="row">
+        <a href="#">
+          <i class="ic-facebook"></i>
+          facebook
+        </a>
+        <a href="#">
+          <i class="ic-youtube"></i>
+          youtube
+        </a>
+        <a href="#">
+          <i class="ic-zalo"></i>
+          zalo
+        </a>
+      </div>
+    </div>
+    @@include('../component/detail-page/article-header/article-header.html')
+    <div class="container">
+      @@include('../component/detail-page/article-body/article-body.html')
+      @@include('../component/box-style/box-product/box-product.html',{"box-name" : "Sản phẩm trong dự án"})
+
+      <div class="submit-comments">
+        <div class="title">
+          Gửi bình luận cho chúng tôi
+        </div>
+        <div class="content">
+          <p class="note">Các trường được đánh dấu * là bắt buộc</p>
+          <div class="form-field">
+            <div class="form-group">
+              <label for="">Họ và tên</label>
+              <input type="text" placeholder="Họ và tên *">
+            </div>
+            <div class="form-group">
+              <label for="">Email</label>
+              <input type="email" placeholder="Email *">
+            </div>
+            <div class="form-group">
+              <label for="">Bình luận</label>
+              <textarea id="description" name="description" placeholder="Nhập bình luận của bạn"></textarea>
+            </div>
+          </div>
+          <a href="#" class="btn-send">gửi bình luận</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="back-to-top"></div>
+  <!-- site footer -->
+  @@include('../component/footer/footer.html')
+  <!-- JS Global Compulsory-->
+  <script src="../js/jquery-3.1.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="../js/ui.js"></script>
+</body>

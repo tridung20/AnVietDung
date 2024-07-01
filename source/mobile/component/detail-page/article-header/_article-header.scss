@@ -1,0 +1,12 @@
+.article {
+    &__title {
+        background: var(--primary);
+        color: #fff;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 20px 0;
+    }
+}

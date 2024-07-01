@@ -1,0 +1,39 @@
+// @mixin title-decor {}
+
+// @mixin title {
+//     .box-heading {
+//         margin-bottom: 8px;
+
+//         .title {
+//             color: var(--primary, #CD5600);
+//             font-family: Cormorant;
+//             font-size: 24px;
+//             font-weight: 600;
+//             line-height: 130%;
+//             text-transform: uppercase;
+//         }
+//     }
+// }
+
+// @mixin scroll {
+//     &::-webkit-scrollbar-track {
+//         -webkit-box-shadow: inset 0 0 4px #fff;
+//         border-radius: 6px;
+//         background-color: #fff;
+//     }
+
+//     &::-webkit-scrollbar {
+//         width: 2px;
+//         background: #CED4DA;
+//     }
+
+//     &::-webkit-scrollbar-thumb {
+//         border-radius: 6px;
+//         background-color: #CED4DA;
+//     }
+// }
+
+// @mixin topline {
+//     border-top: 1px solid rgba(0, 0, 0, 0.50);
+//     padding-top: 24px;
+// }

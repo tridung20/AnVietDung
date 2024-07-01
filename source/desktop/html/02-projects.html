@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>02-projects</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="preload" href="../styles/fonts/icomoon/icomoon.woff" as="font" type="woff" crossorigin="">
+    <link rel="preload" href="../styles/fonts/Lexed/Lexed-Bold.woff2" as="font" type="woff2" crossorigin="">
+    <link rel="preload" href="../styles/fonts/Lexed/Lexed-SemiBold.woff2" as="font" type="woff2" crossorigin="">
+    <link rel="preload" href="../styles/fonts/Lexed/Lexed-Medium.woff2" as="font" type="woff2" crossorigin="">
+    <link rel="preload" href="../styles/fonts/Lexed/Lexed-Regular.woff2" as="font" type="woff2" crossorigin="">
+    <link rel="preload" href="../styles/fonts/Lexed/Lexed-Light.woff2" as="font" type="woff2" crossorigin="">
+    <link rel="stylesheet" type="text/css" href="../styles/css/desktop.css">
+</head>
+
+<body>
+    <!-- site header -->
+    @@include('../component/header/header.html')
+    <!-- site body -->
+    <div class="site-body">
+        <div class="box-social">
+            <a href="#">
+                <i class="ic-call"></i>
+                call
+            </a>
+            <div class="row">
+                <a href="#">
+                    <i class="ic-facebook"></i>
+                    facebook
+                </a>
+                <a href="#">
+                    <i class="ic-youtube"></i>
+                    youtube
+                </a>
+                <a href="#">
+                    <i class="ic-zalo"></i>
+                    zalo
+                </a>
+            </div>
+        </div>
+        @@include('../component/box-style/project-list/project-list.html')
+    </div>
+    @@include('../component/button/back-to-top.html')
+    <div class="back-to-top"></div>
+    <!-- site footer -->
+    @@include('../component/footer/footer.html')
+    <!-- JS Global Compulsory-->
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/ui.js"></script>
+</body>

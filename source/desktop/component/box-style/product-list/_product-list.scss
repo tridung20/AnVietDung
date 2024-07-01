@@ -1,0 +1,47 @@
+.product-list {
+    padding: 40px 0;
+    background: #F4F7FA;
+
+    .container {
+        display: grid;
+    }
+
+    .breadcrumb {}
+
+    .zone {
+        >* {
+            margin-bottom: 50px;
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .btn-view-more {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-top: 50px;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--primary);
+        text-decoration: none;
+        transition: all 0.3s;
+        justify-self: end;
+
+        i {
+            font-weight: 600;
+
+            &::before {
+                font-size: 20px;
+            }
+
+        }
+
+        &:hover {
+            gap: 16px;
+        }
+    }
+}

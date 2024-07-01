@@ -1,0 +1,39 @@
+.abf-homepage {
+    .swiper {
+        width: 100%;
+
+        .swiper-slide {
+            position: relative;
+
+            .img-content {
+                position: absolute;
+                color: #fff;
+                text-align: center;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.70);
+                
+                p {
+                    
+                    &:first-child {
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+
+                    &:last-child {
+                        font-size: 20px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        } 
+    }
+}
