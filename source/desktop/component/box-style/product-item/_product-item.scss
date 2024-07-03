@@ -114,6 +114,10 @@
       font-size: 28px;
       font-weight: $font-weight-semibold;
       margin-bottom: 12px;
+
+      @include media-breakpoint-down(lg) {
+        font-size: 24px;
+      }
     }
 
     .story {
@@ -238,6 +242,36 @@
           padding-left: 24px;
           font-size: 14px;
           font-weight: 300;
+        }
+      }
+    }
+
+    .description {
+      margin-top: 24px;
+
+      > * {
+        margin-bottom: 4px;
+        display: block;
+      }
+
+      .title {
+        color: #141414;
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom: 8px;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 18px;
+        }
+      }
+
+      .text {
+        color: var(--gray-700);
+        font-weight: 400;
+        font-size: 18px;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 16px;
         }
       }
     }

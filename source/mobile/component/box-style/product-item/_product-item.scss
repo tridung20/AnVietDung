@@ -103,6 +103,28 @@
         }
       }
     }
+
+    .description {
+      margin-top: 24px;
+
+      > * {
+        margin-bottom: 4px;
+        display: block;
+      }
+
+      .title {
+        color: #141414;
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+
+      .text {
+        color: var(--gray-700);
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
   }
 
   .product-img {
